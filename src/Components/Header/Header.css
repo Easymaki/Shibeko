@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.contact-block_main {
+  max-width: 1200px;
+  min-width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.contact-block {
+  background-color: #161616;
+}
+.contact-block-txt {
+  color: #e2e2e2;
+  font-size: 14px;
+}
+.header-block-main {
+  width: 100%;
+  margin: 0 auto;
+}

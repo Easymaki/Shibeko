@@ -1,0 +1,21 @@
+.section-switch {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 18px;
+}
+.router-link {
+  text-decoration: none;
+  color: #161616;
+  font-weight: 300;
+  font-size: 16px;
+}
+.shopping-router {
+  margin-right: 18px;
+}
+.router-link.router-active {
+  font-weight: 500;
+  padding-bottom: 4px;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
