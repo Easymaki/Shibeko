@@ -2,26 +2,31 @@ import "./SearchBar.css";
 import React, { useState } from "react";
 
 export default function SearchBar() {
-  const [searchbar, setSearchBar] = useState("searchbar-input");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setSearchBar("searchbar-input_active");
-    } else {
-      setSearchBar("searchbar-input");
-    }
-    setIsMenuClicked(!isMenuClicked);
+  const clickMenu = () => {
+    setIsMenuClicked(true);
+  };
+  const unClickMenu = () => {
+    setIsMenuClicked(false);
   };
   return (
     <div className="searchbar">
       <form>
-        <input
-          type="text"
-          className={searchbar}
-          onClick={updateMenu}
-          title="Search..."
-        />
+        {isMenuClicked === false ? (
+          <input
+            type="text"
+            className="searchbar-input"
+            onClick={clickMenu}
+            title="Search..."
+          />
+        ) : (
+          <input
+            type="text"
+            className="searchbar-input_active"
+            onBlur={unClickMenu}
+            title="Search..."
+          />
+        )}
       </form>
     </div>
   );
